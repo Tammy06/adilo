@@ -1,5 +1,5 @@
 <template>
-  <nav class="border-b border-grey">
+  <nav class="border-b border-gray">
             <div class="grid grid-cols-nav w-header-wrapper mx-auto">
                 <div>
                     <div class="relative">
@@ -17,7 +17,7 @@
                         <div class="relative">
                             <a class="py-4 text-sm menu-item active" href="#" @click="show = !show">
                                 <span>Tools & App 
-                                    <i class="text-xs text-smokey-grey fa-solid fa-angle-down"></i>
+                                    <i class="text-xs text-smokey-gray fa-solid fa-angle-down"></i>
                                 </span>
                             </a>
 

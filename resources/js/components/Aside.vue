@@ -1,8 +1,8 @@
 <template>
-  <aside class="border border-r-pacific-blue flex justify-center h-screen bg-gray-50">
+  <aside class="border-r border-r-pacific-blue flex justify-center h-screen bg-gray-50 sticky top-0">
     <div class=" w-5/6 my-10">
         <div class="mb-2">
-            <a href="#" class="text-xs text-rhino bg-grey-dark-100 border rounded-lg border-grey-light-100 px-5 py-2 block w-full h-full">
+            <a href="#" class="text-xs text-rhino bg-gray-dark-100 border rounded-lg border-gray-light-100 px-5 py-2 block w-full h-full">
                 <span class="inline-block align-middle mr-5">
                     <svg xmlns="http://www.w3.org/2000/svg" width="25.976" height="20.601" viewBox="0 0 25.976 20.601">
                         <g id="video-player" transform="translate(0 -6)">
@@ -15,7 +15,7 @@
             </a>
         </div>
         <div class="mb-2">
-            <a href="#" class="text-xs text-rhino px-5 py-2 block w-full h-full">
+            <a href="#" class="text-xs text-rhino px-5 py-2 block w-full h-full hover:bg-gray-dark-100  hover:rounded-lg">
                 <span class="inline-block align-middle mr-5">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
@@ -36,7 +36,3 @@ export default {
     }
 }
 </script>
-
-<style>
-
-</style>
