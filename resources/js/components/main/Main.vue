@@ -24,7 +24,7 @@
               <span class="inline-block mr-2 rounded-lg"><i class="fas fa-video"></i></span>
               <span>new request</span>
             </div>
-            <div class="cursor-pointer rounded-3xl py-2 px-4 bg-custom-red text-white">
+            <div class="cursor-pointer rounded-3xl py-2 px-4 bg-custom-red text-white" @click="this.showModal = true">
               <span class="inline-block mr-2 rounded-lg"><i class="fas fa-play"></i></span>
               <span>start recording</span>
             </div>
@@ -32,8 +32,9 @@
         </div>
       </div>
     </div>
-    <!-- <List/> -->
-    <Empty/>
+    <List v-if="this.recordings.length" />
+    <Empty v-if="!this.recordings.length" />
+    <Modal v-if="this.showModal" v-on:hide-modal="this.showModal = false" />
   </div>
 </template>
 
@@ -41,11 +42,18 @@
   import List from "./List.vue";
   import Empty from "./Empty.vue";
   import Preview from "../Preview.vue";
+  import Modal from './Modal.vue';
 
   export default {
+      data(){
+        return{
+          showModal: false,
+          recordings: [],
+        }
+      },
       mounted(){
           console.log('main');
       },
-      components : { List, Empty, Preview }
+      components : { List, Empty, Preview, Modal  }
   }
 </script>

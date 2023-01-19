@@ -5,7 +5,7 @@
 
 button[disabled]{
     background: @smokey-gray;
-    cursor: ;
+    cursor: not-allowed;
 }
 
 // menu items styles
@@ -67,20 +67,19 @@ button[disabled]{
     }
 }
 
-.toggle-switch--check{
+.toggle-switch--checked{
     background: @saffron-mango;
     div{
         position: absolute;
         border: 1px solid @saffron-mango;
         left: 20px;
-        top: -1px;
         .fa-check{
             visibility: visible;
         }
     }
 }
 
-.toggle-switch--uncheck{
+.toggle-switch--unchecked{
     background: @pacific-blue;
     div{
         position: absolute;

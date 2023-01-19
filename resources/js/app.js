@@ -6,6 +6,7 @@
 
 import './bootstrap';
 import { createApp } from 'vue';
+import store from './store';
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -33,4 +34,4 @@ import Welcome from './components/Welcome.vue';
  * scaffolding. Otherwise, you will need to add an element yourself.
  */
 
-createApp(Welcome).mount('#app');
+createApp(Welcome).use(store).mount('#app');
