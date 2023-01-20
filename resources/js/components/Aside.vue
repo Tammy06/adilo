@@ -31,8 +31,6 @@
 
 <script>
 export default {
-    mounted(){
-        console.log('aside');
-    }
+    
 }
 </script>

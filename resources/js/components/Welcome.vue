@@ -15,11 +15,7 @@
     import Aside from './Aside.vue';
     import Preview from './Preview.vue';
 
-    export default {
-        
-        mounted() {
-            console.log('Component mounted.')
-        },
+    export default { 
         components : { Header, Aside, Main, Preview },
     }
 </script>

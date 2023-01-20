@@ -17,6 +17,10 @@
 
 <script>
 export default {
-
+  mounted() {
+    // get permission
+    var media = this.$store.getters.media;
+    console.log(media);
+  },
 }
 </script>

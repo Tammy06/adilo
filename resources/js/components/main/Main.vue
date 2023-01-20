@@ -51,9 +51,6 @@
           recordings: [],
         }
       },
-      mounted(){
-          console.log('main');
-      },
       components : { List, Empty, Preview, Modal  }
   }
 </script>
