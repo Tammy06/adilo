@@ -27,7 +27,10 @@ module.exports = {
       },
       width: {
         'header-wrapper': '90%',
-      }
+      },
+      fontSize: {
+        '2xs': '10px',
+      },
     },
   },
   plugins: [],

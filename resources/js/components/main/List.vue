@@ -17,7 +17,7 @@
                                 <source :src="recordings.src" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <span class="text-xs text-white bg-black px-2 py-1 absolute right-1 bottom-1">2:44</span>
+                            <span class="text-2xs text-white rounded bg-black px-2 absolute right-1 bottom-1">2:44</span>
                         </div>
                     </td>
                     <td>
@@ -42,13 +42,6 @@
 
 <script>
     export default {
-        methods: {
-            download(src){
-                let video = document.createElement("video");
-                video.src = src;
-                video.setAttribute('download', 'download');
-                video.click();
-            }
-        }
+        //    
     }
 </script>
