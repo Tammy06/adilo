@@ -7,6 +7,7 @@
 import './bootstrap';
 import { createApp } from 'vue';
 import store from './store';
+// import { createRouter, createWebHashHistory, RouterView  } from 'vue-router';
 
 /**
  * Next, we will create a fresh Vue application instance. You may then begin
@@ -16,22 +17,6 @@ import store from './store';
 
 import Welcome from './components/Welcome.vue';
 
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-
-// Object.entries(import.meta.glob('./**/*.vue', { eager: true })).forEach(([path, definition]) => {
-//     app.component(path.split('/').pop().replace(/\.\w+$/, ''), definition.default);
-// });
-
-/**
- * Finally, we will attach the application instance to a HTML element with
- * an "id" attribute of "app". This element is included with the "auth"
- * scaffolding. Otherwise, you will need to add an element yourself.
- */
-
-createApp(Welcome).use(store).mount('#app');
+createApp(Welcome)
+.use(store)
+.mount('#app');

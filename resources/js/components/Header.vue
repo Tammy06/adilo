@@ -23,7 +23,7 @@
 
                             <!-- Hide/show dropdown -->
                             <div v-if="show" class="nav-dropdown rounded-md">
-                                <a href="#" class="active">Snapbyte Recorder</a>
+                                <a href="#" class="active" @click="$store.dispatch('showPreview', false)">Snapbyte Recorder</a>
                                 <a href="#">Audio Bounce</a>
                                 <a href="#">Sugar Voice</a>
                             </div>
@@ -66,6 +66,8 @@ export default {
             show: false,
         }
     },
-
+    methods: {
+        // 
+    }
 }
 </script>
