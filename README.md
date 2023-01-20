@@ -5,6 +5,7 @@
 <h3>Setup</h3>
 <p>Project should be ran like everyother standard laravel 9 app with vue.js scaffold [Laravel installation guide](https://laravel.com/docs/9.x/installation)</p>
 
+<p>NB: To enable screen or camera recording, application must be served over https (https://) or a local development server (localhost). Accessing device media over an unsecure network (http) is prohibited by browser<p>
 
 <br>
 <p><b>Notable Tools Used<b></p>
@@ -15,6 +16,3 @@
  <li>Tailwind</li>
  <li>vite</li>
 <ul>
-    
-    
-<p>NB: To enable screen or camera recording, application must be served over https (https://) or a local development server (localhost). Accessing device media over an unsecure network (http) is prohibited by browser<p>
