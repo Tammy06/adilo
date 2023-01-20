@@ -10,25 +10,27 @@
                     <td class="px-2">size</td>
                     <td class="px-2 whitespace-nowrap">Last Modified</td>
                 </tr>
-                <tr>
+                <tr v-for="(recordings, index) in this.$store.getters.recordings" :key="recordings.name">
                     <td>
                         <div class="relative w-32 h-16 rounded-md overflow-hidden">
                             <video class="object-cover w-full h-full" width="320" height="240" controls>
-                                <source src="videos/mov_bbb.mp4" type="video/mp4">
+                                <source :src="recordings.src" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
                             <span class="text-xs text-white bg-black px-2 py-1 absolute right-1 bottom-1">2:44</span>
                         </div>
                     </td>
                     <td>
-                        <div class="w-1/2">
-                            <h4>Getting it right the first time</h4>
-                            <p class="text-pacific-blue">The Video description is shown here if the user has added it.</p>
+                        <div class="w-1/2 cursor-pointer">
+                            <a :href="recordings.src" target="_blank" class="block">
+                                <h4>{{recordings.title + ' (' + (index + 1) + ')'}}</h4>
+                                <p class="text-pacific-blue">{{recordings.description}}</p>
+                            </a>
                         </div>
                     </td>
-                    <td><span class="px-2">324</span></td>
-                    <td><span class="px-2 whitespace-nowrap">923 KB</span></td>
-                    <td><span class="px-2 whitespace-nowrap">3 months ago</span></td>
+                    <td><span class="px-2">{{recordings.views}}</span></td>
+                    <td><span class="px-2 whitespace-nowrap">{{recordings.size}}</span></td>
+                    <td><span class="px-2 whitespace-nowrap">{{recordings.lastModified}}</span></td>
                     <td><span class="text-lg cursor-pointer"><i class="fas fa-ellipsis-h"></i></span></td>
                 </tr>
                 
@@ -40,6 +42,13 @@
 
 <script>
     export default {
-
+        methods: {
+            download(src){
+                let video = document.createElement("video");
+                video.src = src;
+                video.setAttribute('download', 'download');
+                video.click();
+            }
+        }
     }
 </script>

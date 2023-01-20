@@ -8,7 +8,7 @@
             <span>></span>
             <span>My Recordings</span>
           </div>
-          <p>My Recordings <span class="text-rhino font-semibold">25</span></p>
+          <p>My Recordings <span class="text-rhino font-semibold">{{this.$store.getters.recordings.length}}</span></p>
         </div>
         <div class="relative flex justify-end">
           <div class="grid grid-cols-4 gap-x-4 h-5 text-xs text-center text-gray-500 capitalize mt-2">
@@ -32,8 +32,8 @@
         </div>
       </div>
     </div>
-    <List v-if="this.recordings.length" />
-    <Empty v-if="!this.recordings.length" />
+    <List v-if="this.$store.getters.recordings.length" />
+    <Empty v-if="!this.$store.getters.recordings.length" />
     <Modal v-if="this.showModal" v-on:hide-modal="this.showModal = false" />
   </div>
 </template>
@@ -48,7 +48,6 @@
       data(){
         return{
           showModal: false,
-          recordings: [],
         }
       },
       components : { List, Empty, Preview, Modal  }
