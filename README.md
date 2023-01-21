@@ -1,5 +1,5 @@
 <h1>Adilo Video Recorder</h1>
-<p>Camera and screen recoder app</p>
+<p>Camera and screen recoding app</p>
 
 
 <h3>Setup</h3>
