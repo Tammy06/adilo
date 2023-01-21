@@ -64,16 +64,18 @@ export default {
       // set user/device media options
       var cameraMediaOptions = {
           video: {
-              width: 300,
-              height: 300
+              // use default size
+              // width: 300,
+              // height: 300
           },
           audio: allowAudio
       }
 
       var screenMediaOptions = {
         video: {
-          width: 720,
-          height: 480,
+          // use default size
+          // width: 720,
+          // height: 480,
           aspectRatio: 1920/1080,
           cursor: "never",
           frameRate: 30
