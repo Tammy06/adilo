@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       gridTemplateColumns: {
         'nav': '1fr 4fr 2fr',
-        'layout': '20% auto',
+        'layout': '260px auto',
         'main-header': '150px auto',
       },
       colors: {
