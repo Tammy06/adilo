@@ -33,6 +33,14 @@ export default createStore({
             context.commit('UPDATE_RECORDINGS', recordings);
         },
 
+        deleteRecord(context, payload){
+            var recordings = context.state.recordings;
+            recordings.forEach((record, index) => {
+                if(record.id == payload) recordings.splice(index, 1);
+            });           
+            context.commit('UPDATE_RECORDINGS', recordings);
+        },
+
         showList(context, payload){
             context.commit('UPDATE_PREVIEW', payload);
         }

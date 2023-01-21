@@ -169,9 +169,9 @@ export default {
       var src = URL.createObjectURL(this.BLOB);
       var title = 'Test video';
       var description = 'This is the video description, click to preview and download video';
-      
       // generate video data
       var recordedData = {
+        id: Date.now(),
         src: src,
         // dummy data
         title: title,
