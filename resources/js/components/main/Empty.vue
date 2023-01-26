@@ -13,11 +13,11 @@
                     <span class="inline-block mr-2 rounded-lg"><i class="fas fa-video"></i></span>
                     <span>new request</span>
                 </div>
-                <button v-if="!this.$store.getters.isRecording" class="cursor-pointer rounded-3xl py-2 px-4 bg-custom-red text-white" @click="this.showModal = true">
+                <button v-if="!this.$store.getters.isRecording" class="cursor-pointer capitalize rounded-3xl py-2 px-4 bg-custom-red text-white" @click="this.showModal = true">
                     <span class="inline-block mr-2 rounded-lg"><i class="fas fa-play"></i></span>
                     <span>start recording</span>
                 </button>
-                <button v-else class="cursor-pointer rounded-3xl py-2 px-4 bg-custom-red text-white" @click="this.$router.push({ path: '/preview'});">
+                <button v-else class="cursor-pointer rounded-3xl py-2 px-4 capitalize bg-custom-red text-white" @click="this.$router.push({ path: '/preview'});">
                     <span class="inline-block mr-2 rounded-lg"><i class="fas fa-stop"></i></span>
                     <span>stop recording</span>
                 </button>
