@@ -15,15 +15,15 @@
                     <div class="flex justify-between">
                         <div><a class="py-4 text-sm menu-item" href="#"><span>Projects</span></a></div>
                         <div class="relative">
-                            <a class="py-4 text-sm menu-item active" href="#" @click="show = !show">
+                            <a class="py-4 text-sm menu-item active" href="#" @click="show = !show" @mouseenter="show = true">
                                 <span>Tools & App 
                                     <i class="text-xs text-smokey-gray fa-solid fa-angle-down"></i>
                                 </span>
                             </a>
 
                             <!-- Hide/show dropdown -->
-                            <div v-if="show" class="nav-dropdown rounded-md">
-                                <a href="#" class="active" @click="$store.dispatch('showList', false)">Snapbyte Recorder</a>
+                            <div v-if="show" @mouseleave="show = false" class="nav-dropdown rounded-md">
+                                <router-link to="/">Snapbyte Recorder</router-link>
                                 <a href="#">Audio Bounce</a>
                                 <a href="#">Sugar Voice</a>
                             </div>
@@ -66,8 +66,5 @@ export default {
             show: false,
         }
     },
-    methods: {
-        // 
-    }
 }
 </script>

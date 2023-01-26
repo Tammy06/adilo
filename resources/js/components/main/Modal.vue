@@ -27,7 +27,7 @@
           </div>
 
           <div class="text-center mb-6">
-            <button :disabled="disabledButton" class="w-2/3 text-xs text-white text-ce capitalize rounded-2xl cursor-pointer py-2 px-5 bg-pacific-blue" @click="$store.dispatch('record', this.toggleSwitches)">Start Recording</button>
+            <button :disabled="disabledButton" class="w-2/3 text-xs text-white text-ce capitalize rounded-2xl cursor-pointer py-2 px-5 bg-pacific-blue" @click="showPreview">Start Recording</button>
           </div>
           
         </div>
@@ -61,6 +61,14 @@ export default {
     hideModal(){
       this.$emit('hide-modal', true);
     },
+
+    showPreview(){
+      this.$store.dispatch('record', this.toggleSwitches);
+      this.$router.push({
+        path: '/preview'
+      });
+    },
+
     selectRecordingType(index, type, checked){
       var videoTypes = ['screen', 'camera'];
       var toggleSwitches = this.toggleSwitches;

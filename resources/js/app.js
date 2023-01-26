@@ -6,17 +6,18 @@
 
 import './bootstrap';
 import { createApp } from 'vue';
+import { createRouter, createWebHistory  } from 'vue-router';
 import store from './store';
-// import { createRouter, createWebHashHistory, RouterView  } from 'vue-router';
-
-/**
- * Next, we will create a fresh Vue application instance. You may then begin
- * registering components with the application instance so they are ready
- * to use in your application's views. An example is included for you.
- */
+import routes from './routes';
 
 import Welcome from './components/Welcome.vue';
 
+const router = createRouter({
+    history: createWebHistory(),
+    routes,
+});
+
 createApp(Welcome)
 .use(store)
+.use(router)
 .mount('#app');

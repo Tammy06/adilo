@@ -6,7 +6,7 @@
                 <tr class="font-bold text-sm capitalize align-left">
                     <td>recording</td>
                     <td>title</td>
-                    <td class="px-2">view</td>
+                    <td class="px-2">views</td>
                     <td class="px-2">size</td>
                     <td class="px-2 whitespace-nowrap">Last Modified</td>
                 </tr>
@@ -17,7 +17,7 @@
                                 <source :src="recording.src" type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>
-                            <span class="text-2xs text-white rounded bg-black px-2 absolute right-1 bottom-1">2:44</span>
+                            <span class="text-2xs text-white rounded bg-black px-2 absolute right-1 bottom-1">{{recording.duration}}</span>
                         </div>
                     </td>
                     <td>
@@ -30,11 +30,11 @@
                     </td>
                     <td><span class="px-2">{{recording.views}}</span></td>
                     <td><span class="px-2 whitespace-nowrap">{{recording.size}}</span></td>
-                    <td><span class="px-2 whitespace-nowrap">{{recording.lastModified}}</span></td>
+                    <td><span class="px-2 whitespace-nowrap capitalize">{{timeago(recording.lastModified)}}</span></td>
                     <td class="relative">
                         <div class="absolute top-1/4 expand-on-hover">
                             <span class="text-lg cursor-pointer"><i class="fas fa-ellipsis-h"></i></span>
-                            <div class="w-fit p-1 bg-custom-red text- text-white rounded mt-2 cursor-pointer hidden" @click="this.$store.dispatch('deleteRecord', recording.id);">delete</div>
+                            <div class="w-fit p-1 bg-custom-red text-xs text-white rounded mt-2 cursor-pointer hidden" @click="this.$store.dispatch('deleteRecord', recording.id);">delete</div>
                         </div>
                     </td>
                 </tr>
@@ -46,7 +46,13 @@
 </template>
 
 <script>
+    import moment from "moment";
+
     export default {
-        //    
+        methods: {
+            timeago(value) {
+                return moment(value).fromNow();
+            },
+        },   
     }
 </script>
